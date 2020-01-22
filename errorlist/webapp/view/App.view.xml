@@ -1,0 +1,22 @@
+<mvc:View controllerName="errorlist.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" displayBlock="true" busy="{appModel>/isBusy}">
+	<App id="idAppControl">
+		<pages>
+			<Page
+				showHeader="false">
+				<content>
+					<ObjectHeader
+						icon="sap-icon://person-placeholder" />
+					<Text
+						text="{app>/taskDescription}" />
+					<List
+						items="{/genericusertask/formItems}">
+						<items>
+							<DisplayListItem label="{property}" value="{value}" />
+						</items>
+					</List>
+ 				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
